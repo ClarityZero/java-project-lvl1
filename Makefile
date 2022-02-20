@@ -13,5 +13,3 @@ lint:
 buildp:
 	./gradlew clean build
 
-build:
-        ./gradlew clean build
