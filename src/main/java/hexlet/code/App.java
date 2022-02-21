@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.IsEven;
+import hexlet.code.games.GCD;
 import java.util.Scanner;
 
 public class App {
@@ -13,7 +14,7 @@ public class App {
 
     public static void chooseGame() {
         System.out.println("Please enter the game number and press Enter.");
-        String[] games = {"1 - Greet", "2 - Even", "3 - Calc", "0 - Exit"};
+        String[] games = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "0 - Exit"};
 
         for (String game : games) {
             System.out.println(game);
@@ -34,6 +35,9 @@ public class App {
                 break;
             case "3" :
                 Calc.start();
+                break;
+            case "4" :
+                GCD.start();
                 break;
             default :
                 break;
