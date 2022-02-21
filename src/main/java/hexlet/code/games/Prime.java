@@ -14,16 +14,16 @@ public class Prime {
             int randomNum = Engine.getRandomNumber();
 
             questions[i] = String.valueOf(randomNum);
-            correctAnswers[i] = correctAnswer(randomNum);
+            correctAnswers[i] = correctAnswers(randomNum);
         }
         Engine.game(GAME_RULES, questions, correctAnswers);
     }
 
-    public static String correctAnswer(int number) {
+    private static String correctAnswers(int number) {
         return isPrime(number) ? "yes" : "no";
     }
 
-    public static boolean isPrime(int number) {
+    private static boolean isPrime(int number) {
         if (number == 1) {
             return false;
         }

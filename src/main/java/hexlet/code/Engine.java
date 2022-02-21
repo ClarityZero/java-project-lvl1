@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Engine {
 
     public static final int COUNT_OF_ROUND = 3;
-    static final int MIN_RANDOM = 1;
-    static final int MAX_RANDOM = 100;
+    private static final int MIN_RANDOM = 1;
+    private static final int MAX_RANDOM = 100;
 
     public static void game(String rules, String[] questions, String[] correctAnswers) {
         String playerName = greetingsWithName();
@@ -43,7 +43,7 @@ public class Engine {
         return name;
     }
 
-    public static void printRules(String rules) {
+    private static void printRules(String rules) {
         System.out.println(rules);
     }
 

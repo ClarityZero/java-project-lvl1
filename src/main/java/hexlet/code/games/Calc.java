@@ -22,7 +22,7 @@ public class Calc {
         Engine.game(GAME_RULES, questions, correctAnswers);
     }
 
-    public static String randomSign() {
+    private static String randomSign() {
         int signNumber = Engine.getRandomNumberRange(MAX_SIGNS);
         switch (signNumber) {
             case 0 :
@@ -34,7 +34,7 @@ public class Calc {
         }
     }
 
-    public static int answers(int num1, int num2, String sign) {
+    private static int answers(int num1, int num2, String sign) {
         switch (sign) {
             case "+" :
                 return num1 + num2;

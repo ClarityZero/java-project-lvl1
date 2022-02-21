@@ -24,7 +24,7 @@ public class Progr {
         Engine.game(GAME_RULES, questions, correctAnswers);
     }
 
-    public static String[] quests(int start, int step, int hide) {
+    private static String[] quests(int start, int step, int hide) {
         String[] elements = new String[PROGR_SIZE];
         elements[0] = String.valueOf(start);
 

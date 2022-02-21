@@ -1,11 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
 import hexlet.code.games.IsEven;
+import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progr;
 import hexlet.code.games.Prime;
-import java.util.Scanner;
 
 public class App {
 
@@ -29,7 +28,7 @@ public class App {
 
         switch (gameNumber) {
             case "1" :
-                greeting();
+                Engine.greetingsWithName();
                 break;
             case "2" :
                 IsEven.start();
@@ -49,13 +48,5 @@ public class App {
             default :
                 break;
         }
-    }
-
-    public static void greeting() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        Scanner scanName = new Scanner(System.in);
-        String name = scanName.nextLine();
-        System.out.println("Hello, " + name + "!");
     }
 }

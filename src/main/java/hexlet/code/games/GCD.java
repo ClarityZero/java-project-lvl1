@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
+
     private static final String GAME_RULES = "Find the greatest common divisor of given numbers.";
 
     public static void start() {
@@ -19,7 +20,7 @@ public class GCD {
         Engine.game(GAME_RULES, questions, correctAnswers);
     }
 
-    public static int calcGCD(int num1, int num2) {
+    private static int calcGCD(int num1, int num2) {
         while (num2 != 0) {
             int remainder = num1 % num2;
             num1 = num2;

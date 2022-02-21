@@ -19,14 +19,14 @@ public class IsEven {
         Engine.game(GAME_RULES, questions, correctAnswers);
     }
 
-    public static String correctAnswer(int question) {
+    private static String correctAnswer(int question) {
         if (isEven(question)) {
             return "yes";
         }
         return "no";
     }
 
-    public static boolean isEven(int number) {
+    private static boolean isEven(int number) {
         return number % 2 == 0;
     }
 }
