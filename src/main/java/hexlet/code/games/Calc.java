@@ -29,7 +29,7 @@ public class Calc {
                 return "+";
             case 1 :
                 return "-";
-            default :
+            case 2 :
                 return "*";
         }
     }
@@ -40,7 +40,7 @@ public class Calc {
                 return num1 + num2;
             case "-" :
                 return num1 - num2;
-            default :
+            case "*" :
                 return num1 * num2;
         }
     }
