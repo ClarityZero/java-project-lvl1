@@ -23,7 +23,7 @@ public class Calc {
     }
 
     private static String randomSign() {
-        int signNumber = Engine.getRandomNumberRange(MAX_SIGNS);
+        int signNumber = Engine.getRandomNumber(MAX_SIGNS);
         switch (signNumber) {
             case 0 :
                 return "+";

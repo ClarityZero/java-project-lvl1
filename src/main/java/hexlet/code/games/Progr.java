@@ -14,8 +14,8 @@ public class Progr {
 
         for (int i = 0; i < Engine.COUNT_OF_ROUND; i++) {
             int randomStart = Engine.getRandomNumber();
-            int randomStep = Engine.getRandomNumberRange(PROGR_STEP);
-            int randomHide = Engine.getRandomNumberRange(PROGR_SIZE);
+            int randomStep = Engine.getRandomNumber(PROGR_STEP);
+            int randomHide = Engine.getRandomNumber(PROGR_SIZE);
 
             String[] questAndAnsw = quests(randomStart, randomStep, randomHide);
             questions[i] = questAndAnsw[0];

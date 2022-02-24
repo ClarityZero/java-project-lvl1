@@ -47,12 +47,16 @@ public class Engine {
         System.out.println(rules);
     }
 
-    public static int getRandomNumber() {
-        return (int) ((Math.random() * (MAX_RANDOM - MIN_RANDOM)) + MIN_RANDOM);
+    public static int getRandomNumber(int max, int min) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 
-    public static int getRandomNumberRange(int max) {
-        return (int) ((Math.random() * (max - 1)) + 1);
+    public static int getRandomNumber(int max) {
+        return getRandomNumber(max, MIN_RANDOM);
+    }
+
+    public static int getRandomNumber() {
+        return getRandomNumber(MAX_RANDOM, MIN_RANDOM);
     }
 
     public static String userAnswer() {
