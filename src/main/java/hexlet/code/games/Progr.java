@@ -17,21 +17,23 @@ public class Progr {
             int randomStep = Engine.getRandomNumber(PROGR_STEP);
             int randomHide = Engine.getRandomNumber(PROGR_SIZE);
 
-            String[] questAndAnsw = quests(randomStart, randomStep, randomHide);
+            String[] questAndAnsw = hideElement(quests(randomStart, randomStep, PROGR_SIZE), randomHide);
             questions[i] = questAndAnsw[0];
             correctAnswers[i] = questAndAnsw[1];
         }
         Engine.game(GAME_RULES, questions, correctAnswers);
     }
 
-    private static String[] quests(int start, int step, int hide) {
-        String[] elements = new String[PROGR_SIZE];
+    public static String[] quests(int start, int step, int size) {
+        String[] elements = new String[size];
         elements[0] = String.valueOf(start);
-
-        for (int i = 1; i < PROGR_SIZE; i++) {
+        for (int i = 1; i < size; i++) {
             elements[i] = String.valueOf((start + step * i));
         }
+        return elements;
+    }
 
+    public static String[] hideElement(String[] elements, int hide) {
         String[] result = new String[2];
         result[1] = elements[hide - 1];
         elements[hide - 1] = "..";
