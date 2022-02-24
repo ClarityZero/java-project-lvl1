@@ -9,11 +9,11 @@ import hexlet.code.games.Prime;
 public class App {
 
     public static void main(String[] args) {
-        chooseGame();
+        gameMenu();
         startGame();
     }
 
-    public static void chooseGame() {
+    public static void gameMenu() {
         System.out.println("Please enter the game number and press Enter.");
         String[] games = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "5 - Progression", "6 - Prime", "0 - Exit"};
         for (String game : games) {
